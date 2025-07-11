@@ -103,8 +103,9 @@ body {
   list-style-type: none;
   background-color: colors.$primary;
   padding: 10px 20px;
-  border-radius: 20px;
-  justify-content: space-between;
+  border-radius: 30px;
+  gap: 10px;
+  align-items: center;
 }
 
 #tasks span {
@@ -112,12 +113,11 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: white;
-  align-self: flex-start;
 }
 
 .tick {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: white;
   border-radius: 100%;
   align-self: flex-end;
