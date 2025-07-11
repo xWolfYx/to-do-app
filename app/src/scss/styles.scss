@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   font-size: 16px;
   font-family: arial;
@@ -13,6 +18,11 @@ html {
 
 body {
   background-color: colors.$background;
+}
+
+main {
+  padding-top: calc(6.5vh + 10px);
+  padding-bottom: calc(7vh + 4rem);
 }
 
 #top-nav {
@@ -91,8 +101,6 @@ body {
 }
 
 #tasks {
-  margin-top: calc(6.5vh + 10px);
-  margin-bottom: calc(7vh + 4rem);
   padding: 0 10px;
   display: flex;
   flex-flow: column nowrap;
