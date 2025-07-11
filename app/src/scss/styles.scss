@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  font-family: arial;
+}
+
 body {
   background-color: colors.$background;
 }
@@ -29,7 +34,6 @@ body {
     list-style-type: none;
     color: white;
     font-weight: bold;
-    font-family: arial;
 
     &:not(:first-child) {
       border-left: 2px solid colors.$background;
@@ -82,4 +86,40 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#tasks {
+  margin-top: calc(7vh + 10px);
+  margin-bottom: calc(7vh + 4rem);
+  padding: 0 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+#tasks li {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  background-color: colors.$primary;
+  padding: 10px 20px;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+#tasks span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+  align-self: flex-start;
+}
+
+.tick {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 100%;
+  align-self: flex-end;
+  flex-shrink: 0;
 }
