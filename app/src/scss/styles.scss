@@ -9,3 +9,35 @@
 body {
   background-color: colors.$background;
 }
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: colors.$primary;
+}
+
+#top-nav > ul {
+  height: 7vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+
+    &:not(:first-child) {
+      border-left: 2px solid colors.$background;
+    }
+
+    &.active {
+      background-color: colors.$accent;
+    }
+  }
+}
