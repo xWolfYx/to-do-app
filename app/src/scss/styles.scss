@@ -24,7 +24,7 @@ body {
 }
 
 #top-nav > ul {
-  height: 7vh;
+  height: 6.5vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   li {
@@ -89,7 +89,7 @@ body {
 }
 
 #tasks {
-  margin-top: calc(7vh + 10px);
+  margin-top: calc(6.5vh + 10px);
   margin-bottom: calc(7vh + 4rem);
   padding: 0 10px;
   display: flex;
