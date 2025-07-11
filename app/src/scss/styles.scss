@@ -108,6 +108,7 @@ main {
 }
 
 #tasks li {
+  width: clamp(225px, 100%, 768px);
   display: flex;
   flex-flow: row nowrap;
   list-style-type: none;
