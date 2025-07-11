@@ -19,8 +19,14 @@ body {
 }
 
 main {
+  max-width: 100%;
   padding-top: calc(6.5vh + 10px);
   padding-bottom: calc(7vh + 4rem);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
 }
 
 #top-nav {
