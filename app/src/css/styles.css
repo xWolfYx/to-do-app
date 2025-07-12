@@ -112,17 +112,53 @@ main {
 }
 
 .task {
-  width: clamp(225px, 100%, 768px);
   display: flex;
   flex-flow: row nowrap;
-  list-style-type: none;
-  background-color: #ff6668;
-  padding: 10px 20px;
-  border-radius: 30px;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
+  width: clamp(225px, 100%, 768px);
+  padding: 10px 20px;
+  list-style-type: none;
+  border-radius: 30px;
+  background-color: #ff6668;
   overflow: hidden;
+}
+
+.task-body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 100%;
+  background-size: 50%;
+}
+
+.edit-btn {
+  background: url("/app/assets/images/task-icons/task-edit-icon.png") no-repeat center;
+  background-size: 50%;
+}
+
+.delete-btn {
+  background: url("/app/assets/images/task-icons/task-delete-icon.png") no-repeat center;
+  background-size: 50%;
 }
 
 .task-text {
