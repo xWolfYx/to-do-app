@@ -23,7 +23,7 @@
     <div id="container">
       <header>
         <nav id="top-nav">
-          <ul>
+          <ul class="top-nav-buttons">
             <li class="active">Tasks</li>
             <li>Done</li>
             <li>Settings</li>
@@ -32,76 +32,20 @@
       </header>
       <main>
         <ul id="tasks">
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem, ipsum dolor.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit amet consectetur.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span
-              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
-              ullam harum.</span
-            >
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem, ipsum.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur, illo a.</span
-            >
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span
-              >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta,
-              nihil.</span
-            >
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit amet.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem, ipsum.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit amet consectetur.</span>
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
-            <div class="tick"></div>
-          </li>
-          <li class="task-active">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-            <div class="tick"></div>
+          <li class="task task-active">
+            <div class="task-body">
+              <div
+                class="tick"
+                role="checkbox"
+                aria-checked="false"
+                tabindex="0"
+              ></div>
+              <span class="task-text">Lorem ipsum dolor sit.</span>
+            </div>
+            <div class="task-actions">
+              <button class="edit-btn"></button
+              ><button class="delete-btn"></button>
+            </div>
           </li>
         </ul>
       </main>
