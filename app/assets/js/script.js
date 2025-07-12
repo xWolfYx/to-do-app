@@ -42,6 +42,10 @@ class Task {
 
     return li;
   }
+
+  delete() {
+    this.element.remove();
+  }
 }
 
 const tutorial = new Task("Press + button to add a task");
