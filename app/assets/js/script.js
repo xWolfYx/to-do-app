@@ -38,9 +38,18 @@ class Task {
     taskBody.append(tick, taskText);
     taskActions.append(editBtn, deleteBtn);
 
+    editBtn.addEventListener("click", () => this.edit());
     deleteBtn.addEventListener("click", () => this.delete());
 
     return li;
+  }
+
+  edit() {
+    const editedInput = prompt();
+    if (editedInput) {
+      const taskText = this.element.querySelector(".task-text");
+      taskText.textContent = editedInput;
+    }
   }
 
   delete() {
