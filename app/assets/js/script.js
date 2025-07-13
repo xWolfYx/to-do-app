@@ -59,7 +59,8 @@ class Task {
   }
 
   delete() {
-    this.element.remove();
+    const confirmation = confirm("Delete this task?");
+    if (confirmation) this.element.remove();
   }
 }
 
