@@ -78,6 +78,12 @@ main {
   border: none;
   border-radius: 100%;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  transition: 0.4s ease;
+}
+
+.add-task-btn:hover {
+  opacity: 1;
 }
 
 .plus {
