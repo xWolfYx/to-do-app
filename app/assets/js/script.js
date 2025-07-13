@@ -67,7 +67,7 @@ const tutorial = new Task("Press + button to add a task");
 const tasks = document.getElementById("tasks");
 tasks.append(tutorial.element);
 
-const addTaskBtn = document.getElementById("add-task-btn");
+const addTaskBtn = document.querySelector(".add-task-btn");
 
 addTaskBtn.addEventListener("click", function () {
   const input = prompt("Write task description:");
