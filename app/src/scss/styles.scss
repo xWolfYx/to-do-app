@@ -183,7 +183,14 @@ main {
 }
 
 .checked {
+  .tick {
+    background-color: colors.$accent;
+    border: 2px solid white;
+    background: url("../../assets/images/task-icons/tick.png") no-repeat center;
+    background-size: 50%;
+  }
   .task-text {
     text-decoration: line-through;
+    text-decoration-thickness: 2px;
   }
 }

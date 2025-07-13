@@ -176,6 +176,13 @@ main {
   flex-shrink: 0;
 }
 
+.checked .tick {
+  background-color: #ff4a4d;
+  border: 2px solid white;
+  background: url("../../assets/images/task-icons/tick.png") no-repeat center;
+  background-size: 50%;
+}
 .checked .task-text {
   text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }/*# sourceMappingURL=styles.css.map */
