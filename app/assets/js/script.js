@@ -76,3 +76,10 @@ addTaskBtn.addEventListener("click", function () {
     tasks.append(task.element);
   }
 });
+
+addTaskBtn.addEventListener("click", () => {
+  const plusIcon = document.querySelector(".plus");
+  plusIcon.classList.remove("animate");
+  void plusIcon.offsetWidth;
+  plusIcon.classList.add("animate");
+});
