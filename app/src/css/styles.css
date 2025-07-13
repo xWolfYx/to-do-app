@@ -194,6 +194,14 @@ main {
   background-color: white;
   border-radius: 100%;
   flex-shrink: 0;
+  transition: background-color 0.4s ease;
+}
+
+.tick:hover {
+  background-color: #ff4a4d;
+  background: url("../../assets/images/task-icons/tick.png") no-repeat center;
+  background-size: 50%;
+  border: 1px solid white;
 }
 
 .checked .tick {
