@@ -174,4 +174,8 @@ main {
   background-color: white;
   border-radius: 100%;
   flex-shrink: 0;
+}
+
+.checked .task-text {
+  text-decoration: line-through;
 }/*# sourceMappingURL=styles.css.map */
