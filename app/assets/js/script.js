@@ -10,7 +10,7 @@ class Task {
     const tasks = document.getElementById("tasks");
 
     const li = document.createElement("li");
-    li.className = "task task-active";
+    li.className = "task";
 
     const taskBody = document.createElement("div");
     taskBody.className = "task-body";
@@ -38,10 +38,16 @@ class Task {
     taskBody.append(tick, taskText);
     taskActions.append(editBtn, deleteBtn);
 
+    tick.addEventListener("click", () => this.toggleDone());
     editBtn.addEventListener("click", () => this.edit());
     deleteBtn.addEventListener("click", () => this.delete());
 
     return li;
+  }
+
+  toggleDone() {
+    this.done = !this.done;
+    this.element.classList.toggle("checked");
   }
 
   edit() {
