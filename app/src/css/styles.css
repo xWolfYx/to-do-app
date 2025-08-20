@@ -19,34 +19,31 @@ body {
 }
 
 main {
-  width: 100%;
-  padding-top: calc(6.5vh + 0.625rem);
-  padding-bottom: calc(7vh + 4rem);
+  overflow-y: scroll;
 }
 
 #container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  height: 100%;
 }
 
 #top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
   background-color: #ff6668;
 }
 
 .top-nav-buttons {
-  height: 6.5vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  display: flex;
   box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
 .top-nav-buttons li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 0 auto;
   list-style-type: none;
   color: white;
   font-weight: bold;
@@ -59,11 +56,8 @@ main {
 }
 
 #add-task-section {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 7vh;
+  height: 100%;
   background-color: #ff6668;
   box-shadow: 0rem -0.0625rem 0.625rem rgba(0, 0, 0, 0.5);
 }
@@ -117,7 +111,7 @@ main {
 }
 
 #tasks {
-  padding: 0rem 0.625rem;
+  padding: 0.625rem 0.625rem 2.5rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -135,7 +129,6 @@ main {
   list-style-type: none;
   border-radius: 1.875rem;
   background-color: #ff6668;
-  overflow: hidden;
 }
 
 .task-body {
