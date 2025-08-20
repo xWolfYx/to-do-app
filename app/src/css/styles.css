@@ -20,7 +20,7 @@ body {
 
 main {
   width: 100%;
-  padding-top: calc(6.5vh + 10px);
+  padding-top: calc(6.5vh + 0.625rem);
   padding-bottom: calc(7vh + 4rem);
 }
 
@@ -41,7 +41,7 @@ main {
   height: 6.5vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0rem 0.0625rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
 .top-nav-buttons li {
   display: flex;
@@ -52,7 +52,7 @@ main {
   font-weight: bold;
 }
 .top-nav-buttons li:not(:first-child) {
-  border-left: 2px solid #ffeded;
+  border-left: 0.125rem solid #ffeded;
 }
 .top-nav-buttons li.active {
   background-color: #ff4a4d;
@@ -65,7 +65,7 @@ main {
   width: 100%;
   height: 7vh;
   background-color: #ff6668;
-  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0rem -0.0625rem 0.625rem rgba(0, 0, 0, 0.5);
 }
 
 .add-task-btn {
@@ -77,7 +77,7 @@ main {
   height: 4rem;
   border: none;
   border-radius: 100%;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0rem 0rem 0.25rem rgba(0, 0, 0, 0.5);
   opacity: 0.8;
   transition: 0.4s ease;
 }
@@ -107,8 +107,8 @@ main {
 .line1,
 .line2 {
   background-color: white;
-  width: 2px;
-  height: 24px;
+  width: 0.125rem;
+  height: 1.5rem;
   position: absolute;
 }
 
@@ -117,23 +117,23 @@ main {
 }
 
 #tasks {
-  padding: 0 10px;
+  padding: 0rem 0.625rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .task {
   display: flex;
   flex-flow: row nowrap;
-  gap: 10px;
+  gap: 0.625rem;
   align-items: center;
   justify-content: space-between;
-  width: clamp(225px, 100%, 768px);
-  padding: 10px 20px;
+  width: clamp(14.0625rem, 100%, 48rem);
+  padding: 0.625rem 1.25rem;
   list-style-type: none;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   background-color: #ff6668;
   overflow: hidden;
 }
@@ -143,7 +143,7 @@ main {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   overflow: hidden;
 }
 
@@ -151,15 +151,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .edit-btn,
 .delete-btn {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   background-color: transparent;
-  border: 1px solid white;
+  border: 0.0625rem solid white;
   border-radius: 100%;
   background-size: 50%;
   opacity: 0.5;
@@ -189,8 +189,8 @@ main {
 }
 
 .tick {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   background-color: white;
   border-radius: 100%;
   flex-shrink: 0;
@@ -201,18 +201,18 @@ main {
   background-color: #ff4a4d;
   background: url("../../assets/images/task-icons/tick.png") no-repeat center;
   background-size: 50%;
-  border: 1px solid white;
+  border: 0.0625rem solid white;
 }
 
 .checked .tick {
   background-color: #ff4a4d;
-  border: 2px solid white;
+  border: 0.125rem solid white;
   background: url("../../assets/images/task-icons/tick.png") no-repeat center;
   background-size: 50%;
 }
 .checked .task-text {
   text-decoration: line-through;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 0.125rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
