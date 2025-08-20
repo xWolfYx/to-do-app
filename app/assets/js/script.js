@@ -38,9 +38,12 @@ class Task {
     taskBody.append(tick, taskText);
     taskActions.append(editBtn, deleteBtn);
 
-    tick.addEventListener("click", () => this.toggleDone());
-    editBtn.addEventListener("click", () => this.edit());
-    deleteBtn.addEventListener("click", () => this.delete());
+    li.addEventListener("click", (e) => {
+      const target = e.target;
+      if (target.classList.contains("tick")) return this.toggleDone();
+      if (target.classList.contains("edit-btn")) return this.edit();
+      if (target.classList.contains("delete-btn")) return this.delete();
+    });
 
     return li;
   }
