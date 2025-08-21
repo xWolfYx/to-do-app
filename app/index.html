@@ -27,9 +27,9 @@
     <script type="module" src="assets/js/script.js"></script>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <header>
-        <nav id="top-nav">
+        <nav class="top-nav">
           <ul class="top-nav-buttons">
             <li class="tasks-tab active">Tasks</li>
             <li class="done-tab">Done</li>
@@ -38,11 +38,13 @@
         </nav>
       </header>
       <main>
-        <ul id="tasks"></ul>
-        <ul id="done"></ul>
-        <ul id="settings"></ul>
+        <div class="tabs">
+          <ul id="tasks"></ul>
+          <ul id="done"></ul>
+          <ul id="settings"></ul>
+        </div>
       </main>
-      <footer id="add-task-section">
+      <footer class="add-task-section">
         <button class="add-task-btn">
           <div class="plus">
             <div class="line1"></div>
