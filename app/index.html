@@ -31,17 +31,17 @@
       <header>
         <nav class="top-nav">
           <ul class="top-nav-buttons">
-            <li class="tasks-tab active">Tasks</li>
-            <li class="done-tab">Done</li>
-            <li class="settings-tab">Settings</li>
+            <li class="tasks-tab active" data-tab="0">Tasks</li>
+            <li class="done-tab" data-tab="1">Done</li>
+            <li class="settings-tab" data-tab="2">Settings</li>
           </ul>
         </nav>
       </header>
       <main>
-        <div class="tabs">
-          <ul id="tasks"></ul>
-          <ul id="done"></ul>
-          <ul id="settings"></ul>
+        <div class="tabs-container">
+          <ul class="tasks tab-0 active"></ul>
+          <ul class="done tab-1"></ul>
+          <ul class="settings tab-2"></ul>
         </div>
       </main>
       <footer class="add-task-section">
