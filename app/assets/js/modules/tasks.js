@@ -1,5 +1,5 @@
 class Task {
-  constructor(text, done = false) {
+  constructor(text, done) {
     this.text = text;
     this.done = done;
 
@@ -68,6 +68,7 @@ class Task {
 }
 
 class App {
+  #tasks = [];
   constructor() {
     const tutorial = new Task("Press + button to add a task");
     const tasks = document.querySelector(".tasks");
@@ -75,11 +76,13 @@ class App {
 
     const addTaskBtn = document.querySelector(".add-task-btn");
 
-    addTaskBtn.addEventListener("click", function () {
+    addTaskBtn.addEventListener("click", () => {
       const input = prompt("Write task description:");
       if (input) {
-        const task = new Task(input);
+        const task = new Task(input, false);
         tasks.append(task.element);
+        this.#tasks.push(task);
+        console.log(this.#tasks);
       }
     });
 
