@@ -40,7 +40,7 @@ main {
 .top-nav-buttons {
   height: 100%;
   display: flex;
-  box-shadow: math.rem(0) math.rem(1) math.rem(5) rgba(0, 0, 0, 0.5);
+  box-shadow: math.rem(0) math.rem(1) math.rem(5) rgba(0, 0, 0, 0.35);
   li {
     display: flex;
     justify-content: center;
@@ -72,6 +72,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  aspect-ratio: 1 / 1;
   width: math.rem(64);
   height: math.rem(64);
   border: none;
@@ -85,12 +86,6 @@ main {
   opacity: 1;
 }
 
-.plus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @keyframes rotatePlus {
   from {
     transform: rotate(0deg);
@@ -100,20 +95,14 @@ main {
   }
 }
 
-.plus.animate {
+.plus-icon {
+  stroke: white;
+  stroke-width: 1px;
+  width: 70%;
+}
+
+.plus-icon.animate {
   animation: rotatePlus 0.4s ease;
-}
-
-.line1,
-.line2 {
-  background-color: white;
-  width: math.rem(2);
-  height: math.rem(24);
-  position: absolute;
-}
-
-.line1 {
-  transform: rotate(90deg);
 }
 
 .tasks,
@@ -237,5 +226,49 @@ main {
 
   .task:hover .task-actions {
     opacity: 1;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .top-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top-nav-buttons {
+    flex-flow: column nowrap;
+    height: 18vh;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    box-shadow: none;
+
+    li {
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      &:not(:first-child) {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .add-task-btn {
+    top: 35vh;
+    left: 150px;
+    height: math.rem(40);
+    width: math.rem(40);
+  }
+  .tasks {
+    padding: math.rem(20);
   }
 }
