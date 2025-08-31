@@ -116,7 +116,8 @@ main {
   transform: rotate(90deg);
 }
 
-#tasks {
+.tasks,
+.done {
   padding: math.rem(10) math.rem(10) math.rem(40);
   display: flex;
   flex-flow: column nowrap;
@@ -218,6 +219,9 @@ main {
   }
 }
 
+.tabs-container ul:not(.active) {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
   .tick,
   .edit-btn,

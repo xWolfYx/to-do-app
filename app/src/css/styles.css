@@ -110,7 +110,8 @@ main {
   transform: rotate(90deg);
 }
 
-#tasks {
+.tasks,
+.done {
   padding: 0.625rem 0.625rem 2.5rem;
   display: flex;
   flex-flow: column nowrap;
@@ -206,6 +207,10 @@ main {
 .checked .task-text {
   text-decoration: line-through;
   text-decoration-thickness: 0.125rem;
+}
+
+.tabs-container ul:not(.active) {
+  display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
