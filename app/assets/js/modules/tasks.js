@@ -70,10 +70,8 @@ class Task {
 class App {
   #tasks = [];
   constructor() {
-    const tutorial = new Task("Press + button to add a task");
-    const tasks = document.querySelector(".tasks");
-    tasks.append(tutorial.element);
     this._attachEvents();
+    this._initTutorial();
   }
 
   _attachEvents() {
@@ -92,6 +90,14 @@ class App {
       void plusIcon.offsetWidth;
       plusIcon.classList.add("animate");
     });
+  }
+
+  _initTutorial() {
+    if (this.#tasks.length === 0) {
+      const tutorial = new Task("Press + button to add a task");
+      const tasks = document.querySelector(".tasks");
+      tasks.append(tutorial.element);
+    }
   }
 }
 
