@@ -1,5 +1,3 @@
-
-
 class Task {
   constructor(text, done = false) {
     this.text = text;
@@ -69,23 +67,29 @@ class Task {
   }
 }
 
-const tutorial = new Task("Press + button to add a task");
-const tasks = document.getElementById("tasks");
-tasks.append(tutorial.element);
+class App {
+  constructor() {
+    const tutorial = new Task("Press + button to add a task");
+    const tasks = document.querySelector(".tasks");
+    tasks.append(tutorial.element);
 
-const addTaskBtn = document.querySelector(".add-task-btn");
+    const addTaskBtn = document.querySelector(".add-task-btn");
 
-addTaskBtn.addEventListener("click", function () {
-  const input = prompt("Write task description:");
-  if (input) {
-    const task = new Task(input);
-    tasks.append(task.element);
+    addTaskBtn.addEventListener("click", function () {
+      const input = prompt("Write task description:");
+      if (input) {
+        const task = new Task(input);
+        tasks.append(task.element);
+      }
+    });
+
+    addTaskBtn.addEventListener("click", () => {
+      const plusIcon = document.querySelector(".plus");
+      plusIcon.classList.remove("animate");
+      void plusIcon.offsetWidth;
+      plusIcon.classList.add("animate");
+    });
   }
-});
+}
 
-addTaskBtn.addEventListener("click", () => {
-  const plusIcon = document.querySelector(".plus");
-  plusIcon.classList.remove("animate");
-  void plusIcon.offsetWidth;
-  plusIcon.classList.add("animate");
-});
+const app = new App();
