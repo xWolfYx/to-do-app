@@ -1,3 +1,5 @@
+const tasksEl = document.querySelector(".tasks");
+
 class Task {
   constructor(text, done) {
     this.text = text;
@@ -7,8 +9,6 @@ class Task {
   }
 
   _createElement() {
-    const tasks = document.getElementById("tasks");
-
     const li = document.createElement("li");
     li.className = "task";
 
@@ -80,7 +80,7 @@ class App {
       const input = prompt("Write task description:");
       if (input) {
         const task = new Task(input, false);
-        tasks.append(task.element);
+        tasksEl.append(task.element);
         this.#tasks.push(task);
         console.log(this.#tasks);
       }
