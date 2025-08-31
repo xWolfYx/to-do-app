@@ -85,7 +85,7 @@ class App {
         console.log(this.#tasks);
       }
 
-      const plusIcon = document.querySelector(".plus");
+      const plusIcon = document.querySelector(".plus-icon");
       plusIcon.classList.remove("animate");
       void plusIcon.offsetWidth;
       plusIcon.classList.add("animate");
