@@ -73,9 +73,11 @@ class App {
     const tutorial = new Task("Press + button to add a task");
     const tasks = document.querySelector(".tasks");
     tasks.append(tutorial.element);
+    this._attachEvents();
+  }
 
+  _attachEvents() {
     const addTaskBtn = document.querySelector(".add-task-btn");
-
     addTaskBtn.addEventListener("click", () => {
       const input = prompt("Write task description:");
       if (input) {
@@ -84,9 +86,7 @@ class App {
         this.#tasks.push(task);
         console.log(this.#tasks);
       }
-    });
 
-    addTaskBtn.addEventListener("click", () => {
       const plusIcon = document.querySelector(".plus");
       plusIcon.classList.remove("animate");
       void plusIcon.offsetWidth;
