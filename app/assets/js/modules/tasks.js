@@ -3,10 +3,10 @@ class Task {
     this.text = text;
     this.done = done;
 
-    this.element = this.createElement();
+    this.element = this._createElement();
   }
 
-  createElement() {
+  _createElement() {
     const tasks = document.getElementById("tasks");
 
     const li = document.createElement("li");
@@ -40,20 +40,20 @@ class Task {
 
     li.addEventListener("click", (e) => {
       const target = e.target;
-      if (target.classList.contains("tick")) return this.toggleDone();
-      if (target.classList.contains("edit-btn")) return this.edit();
-      if (target.classList.contains("delete-btn")) return this.delete();
+      if (target.classList.contains("tick")) return this._toggleDone();
+      if (target.classList.contains("edit-btn")) return this._edit();
+      if (target.classList.contains("delete-btn")) return this._delete();
     });
 
     return li;
   }
 
-  toggleDone() {
+  _toggleDone() {
     this.done = !this.done;
     this.element.classList.toggle("checked");
   }
 
-  edit() {
+  _edit() {
     const editedInput = prompt();
     if (editedInput) {
       const taskText = this.element.querySelector(".task-text");
@@ -61,7 +61,7 @@ class Task {
     }
   }
 
-  delete() {
+  _delete() {
     const confirmation = confirm("Delete this task?");
     if (confirmation) this.element.remove();
   }
